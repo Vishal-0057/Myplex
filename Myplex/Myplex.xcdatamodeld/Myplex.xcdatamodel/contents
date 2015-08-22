@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Award" representedClassName="Award" syncable="YES">
+        <attribute name="awardDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="baseDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="awards" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Cast" representedClassName="Cast" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="dob" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dod" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="role" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owners" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Content" inverseName="casts" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="CertifiedRating" representedClassName="CertifiedRating" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="certifiedRatings" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Comment" representedClassName="Comment" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="comments" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Content" representedClassName="Content" syncable="YES">
+        <attribute name="averageRating" optional="YES" attributeType="Float" defaultValueString="0.0" allowsExternalBinaryDataStorage="YES" indexed="YES" syncable="YES"/>
+        <attribute name="briefDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commentsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="currentUserRating" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="deleted" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="drmEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="elapsedTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="expiresAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="favorite" optional="YES" attributeType="Boolean" defaultValueString="NO" indexed="YES" syncable="YES"/>
+        <attribute name="is3D" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="matchInfo" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="matchStatus" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="myPlexDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="purchased" optional="YES" attributeType="Boolean" indexed="YES" syncable="YES"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="studioDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="type" attributeType="String" defaultValueString="movie" indexed="YES" syncable="YES"/>
+        <attribute name="userRatingsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="awards" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Award" inverseName="owner" inverseEntity="Award" syncable="YES"/>
+        <relationship name="casts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Cast" inverseName="owners" inverseEntity="Cast" syncable="YES"/>
+        <relationship name="certifiedRatings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CertifiedRating" inverseName="owner" inverseEntity="CertifiedRating" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Comment" inverseName="owner" inverseEntity="Comment" syncable="YES"/>
+        <relationship name="criticReviews" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CriticReview" inverseName="owner" inverseEntity="CriticReview" syncable="YES"/>
+        <relationship name="genres" toMany="YES" deletionRule="Cascade" destinationEntity="ContentGenre" inverseName="owner" inverseEntity="ContentGenre" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Image" inverseName="owner" inverseEntity="Image" syncable="YES"/>
+        <relationship name="onSelectActions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="OnSelectAction" inverseName="owner" inverseEntity="OnSelectAction" syncable="YES"/>
+        <relationship name="packages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Package" inverseName="owners" inverseEntity="Package" syncable="YES"/>
+        <relationship name="purchases" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Purchase" inverseName="content" inverseEntity="Purchase" syncable="YES"/>
+        <relationship name="relatedMultimedia" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RelatedMultimedia" inverseName="owner" inverseEntity="RelatedMultimedia" syncable="YES"/>
+        <relationship name="similarContent" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SimilarContent" inverseName="owner" inverseEntity="SimilarContent" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Tag" inverseName="owner" inverseEntity="Tag" syncable="YES"/>
+        <relationship name="userReviews" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="UserReview" inverseName="owner" inverseEntity="UserReview" syncable="YES"/>
+        <relationship name="videos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Video" inverseName="owner" inverseEntity="Video" syncable="YES"/>
+    </entity>
+    <entity name="ContentGenre" representedClassName="ContentGenre" syncable="YES">
+        <relationship name="genre" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Genre" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="genres" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="CriticReview" representedClassName="CriticReview" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="review" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="criticReviews" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Download" representedClassName="Download" syncable="YES">
+        <attribute name="destinationPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="downloaded" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="downloadedToTempDir" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="downloading" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="downlodPercentage" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="drmEnabled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="drmRightsAcquired" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paused" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="profile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resumeData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="sourcePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temporaryDestinationFilePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="waiting" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="Favorite" representedClassName="Favorite" syncable="YES">
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Genre" representedClassName="Genre" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteId" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Image" representedClassName="Image" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="profile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="resolution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="images" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="LiveTV" representedClassName="LiveTV" syncable="YES">
+        <attribute name="epg" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="Movie" representedClassName="Movie" syncable="YES">
+        <attribute name="releaseDate" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="OnSelectAction" representedClassName="OnSelectAction" syncable="YES">
+        <attribute name="actionUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feedbackOnAction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feedbackOnImpress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="onSelectActions" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Package" representedClassName="Package" syncable="YES">
+        <attribute name="bbDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commercialModel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="couponFlag" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="packageId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="packageIndicator" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="packageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="renewalFlag" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="validityPeriod" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owners" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Content" inverseName="packages" inverseEntity="Content" syncable="YES"/>
+        <relationship name="priceDetails" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PriceDetail" syncable="YES"/>
+        <relationship name="promotionDetails" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PromotionDetail" syncable="YES"/>
+    </entity>
+    <entity name="PriceDetail" representedClassName="PriceDetail" syncable="YES">
+        <attribute name="doubleConfirmation" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="paymentChannel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="webBased" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="PromotionDetail" representedClassName="PromotionDetail" syncable="YES"/>
+    <entity name="Purchase" representedClassName="Purchase" syncable="YES">
+        <attribute name="contentType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isReceiptValidated" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="receipt" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validity" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="purchases" inverseEntity="Content" syncable="YES"/>
+        <relationship name="package" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Package" syncable="YES"/>
+    </entity>
+    <entity name="RecommendedContent" representedClassName="RecommendedContent" syncable="YES">
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="RelatedMultimedia" representedClassName="RelatedMultimedia" syncable="YES">
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="relatedMultimedia" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="SimilarContent" representedClassName="SimilarContent" syncable="YES">
+        <relationship name="content" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="similarContent" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Tag" representedClassName="Tag" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qualifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="tags" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="favorites" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" syncable="YES"/>
+        <relationship name="purchased" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="UserReview" representedClassName="UserReview" syncable="YES">
+        <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="review" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="userReviews" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <entity name="Video" representedClassName="Video" syncable="YES">
+        <attribute name="bitrate" attributeType="String" syncable="YES"/>
+        <attribute name="format" attributeType="String" syncable="YES"/>
+        <attribute name="link" attributeType="String" syncable="YES"/>
+        <attribute name="profile" attributeType="String" syncable="YES"/>
+        <attribute name="remoteId" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="resolution" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="videos" inverseEntity="Content" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Award" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Cast" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CertifiedRating" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Comment" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Content" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ContentGenre" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CriticReview" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Download" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Favorite" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Genre" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Image" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="LiveTV" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Movie" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="OnSelectAction" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Package" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PriceDetail" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="PromotionDetail" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Purchase" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="RecommendedContent" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="RelatedMultimedia" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="SimilarContent" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Tag" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="User" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="UserReview" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Video" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>

@@ -1,0 +1,108 @@
+
+/* Class = "IBUIButton"; normalTitle = "Join Viva"; ObjectID = "1Qa-jN-43D"; */
+"1Qa-jN-43D.normalTitle" = "Join Viva";
+
+/* Class = "IBUILabel"; text = "July 29, 2013"; ObjectID = "42l-U0-eye"; */
+"42l-U0-eye.text" = "July 29, 2013";
+
+/* Class = "IBUITextView"; text = "By creating an account and signing up to myplex, I accept the Terms of service and Privacy policy"; ObjectID = "4Zs-HH-SNK"; */
+"4Zs-HH-SNK.text" = "By creating an account and signing up to myplex, I accept the Terms of service and Privacy policy";
+
+/* Class = "IBUILabel"; text = "2013-12-19"; ObjectID = "4qa-Pa-v0I"; */
+"4qa-Pa-v0I.text" = "2013-12-19";
+
+/* Class = "IBUIButton"; normalTitle = "retrieve"; ObjectID = "6PI-MW-SLZ"; */
+"6PI-MW-SLZ.normalTitle" = "retrieve";
+
+/* Class = "IBUILabel"; text = "Director"; ObjectID = "8xH-Ko-QUb"; */
+"8xH-Ko-QUb.text" = "Director";
+
+/* Class = "IBUITextField"; placeholder = "Email"; ObjectID = "Ej5-f9-7QB"; */
+"Ej5-f9-7QB.placeholder" = "Email";
+
+/* Class = "IBUIButton"; normalTitle = "Fifa 2014 live"; ObjectID = "FuK-5A-hxa"; */
+"FuK-5A-hxa.normalTitle" = "Fifa 2014 live";
+
+/* Class = "IBUIButton"; normalTitle = "Reviews"; ObjectID = "G27-Mf-DY0"; */
+"G27-Mf-DY0.normalTitle" = "Reviews";
+
+/* Class = "IBUIButton"; normalTitle = "Add a comment"; ObjectID = "GEs-Zr-UzW"; */
+"GEs-Zr-UzW.normalTitle" = "Add a comment";
+
+/* Class = "IBUIButton"; normalTitle = "Fifa 2014 matches"; ObjectID = "GpF-de-nXD"; */
+"GpF-de-nXD.normalTitle" = "Fifa 2014 matches";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "LDq-S8-fLe"; */
+"LDq-S8-fLe.normalTitle" = "Button";
+
+/* Class = "IBUIButton"; normalTitle = "Purchased"; ObjectID = "Mg5-hx-j9c"; */
+"Mg5-hx-j9c.normalTitle" = "Purchased";
+
+/* Class = "IBUIButton"; normalTitle = "Sign into Viva"; ObjectID = "N56-S7-LUU"; */
+"N56-S7-LUU.normalTitle" = "Sign into Viva";
+
+/* Class = "IBUISegmentedControl"; PGc-zW-2I1.segmentTitles[0] = "Comments"; ObjectID = "PGc-zW-2I1"; */
+"PGc-zW-2I1.segmentTitles[0]" = "Comments";
+
+/* Class = "IBUISegmentedControl"; PGc-zW-2I1.segmentTitles[1] = "Reviews"; ObjectID = "PGc-zW-2I1"; */
+"PGc-zW-2I1.segmentTitles[1]" = "Reviews";
+
+/* Class = "IBUITextField"; placeholder = "Email"; ObjectID = "SJB-Kb-77X"; */
+"SJB-Kb-77X.placeholder" = "Email";
+
+/* Class = "IBUIButton"; normalTitle = "Forgot password? Lets fix it here"; ObjectID = "SWc-T8-ElD"; */
+"SWc-T8-ElD.normalTitle" = "Forgot password? Lets fix it here";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut "; ObjectID = "TFz-NV-api"; */
+"TFz-NV-api.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut ";
+
+/* Class = "IBUILabel"; text = "1:42:13"; ObjectID = "UGW-R6-Ri1"; */
+"UGW-R6-Ri1.text" = "1:42:13";
+
+/* Class = "IBUILabel"; text = "Lou Reed"; ObjectID = "Vd0-Rm-wQx"; */
+"Vd0-Rm-wQx.text" = "Lou Reed";
+
+/* Class = "IBUILabel"; text = "Hannibal Chau"; ObjectID = "YFs-3s-s34"; */
+"YFs-3s-s34.text" = "Hannibal Chau";
+
+/* Class = "IBUITextField"; placeholder = "Password"; ObjectID = "YTa-no-dIc"; */
+"YTa-no-dIc.placeholder" = "Password";
+
+/* Class = "IBUITextField"; placeholder = "Password"; ObjectID = "aWf-Mx-fyg"; */
+"aWf-Mx-fyg.placeholder" = "Password";
+
+/* Class = "IBUIButton"; normalTitle = "Starts from 199 onwards"; ObjectID = "bAM-R6-opd"; */
+"bAM-R6-opd.normalTitle" = "Starts from 199 onwards";
+
+/* Class = "IBUILabel"; text = "credits"; ObjectID = "c73-FO-iEu"; */
+"c73-FO-iEu.text" = "credits";
+
+/* Class = "IBUIButton"; normalTitle = "Favorites"; ObjectID = "c9R-aS-MRM"; */
+"c9R-aS-MRM.normalTitle" = "Favorites";
+
+/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "gnk-XM-tFO"; */
+"gnk-XM-tFO.normalTitle" = "Button";
+
+/* Class = "IBUINavigationItem"; title = "Title"; ObjectID = "iFd-oO-z60"; */
+"iFd-oO-z60.title" = "Title";
+
+/* Class = "IBUILabel"; text = "related multimedia"; ObjectID = "lSM-WX-Zf6"; */
+"lSM-WX-Zf6.text" = "related multimedia";
+
+/* Class = "IBUIButton"; normalTitle = "More..."; ObjectID = "mHP-Uy-iOE"; */
+"mHP-Uy-iOE.normalTitle" = "More...";
+
+/* Class = "IBUILabel"; text = "Spider Man"; ObjectID = "tdX-AG-hEg"; */
+"tdX-AG-hEg.text" = "Spider Man";
+
+/* Class = "IBUILabel"; text = "description"; ObjectID = "uiS-mj-MfS"; */
+"uiS-mj-MfS.text" = "description";
+
+/* Class = "IBUIButton"; normalTitle = "back"; ObjectID = "w5g-2L-x5F"; */
+"w5g-2L-x5F.normalTitle" = "back";
+
+/* Class = "IBUIButton"; normalTitle = "results"; ObjectID = "wU7-c9-Lg5"; */
+"wU7-c9-Lg5.normalTitle" = "results";
+
+/* Class = "IBUIButton"; normalTitle = "Comments"; ObjectID = "xWi-L3-GCX"; */
+"xWi-L3-GCX.normalTitle" = "Comments";

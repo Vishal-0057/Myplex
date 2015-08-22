@@ -1,0 +1,31 @@
+//
+//  UIView+Utils.m
+//  Myplex
+//
+//  Created by Igor Ostriz on 11/12/13.
+//  Copyright (c) 2013 Igor Ostriz. All rights reserved.
+//
+
+#import "UIView+Utils.h"
+
+@implementation UIView (Utils)
+
+- (UIViewController *) firstAvailableUIViewController
+{
+    // convenience function for casting and to "mask" the recursive function
+    return (UIViewController *)[self traverseResponderChainForUIViewController];
+}
+
+- (id) traverseResponderChainForUIViewController
+{
+    id nextResponder = [self nextResponder];
+    if ([nextResponder isKindOfClass:[UIViewController class]]) {
+        return nextResponder;
+    } else if ([nextResponder isKindOfClass:[UIView class]]) {
+        return [nextResponder traverseResponderChainForUIViewController];
+    } else {
+        return nil;
+    }
+}
+
+@end

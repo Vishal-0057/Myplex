@@ -1,0 +1,17 @@
+//
+//  Distribution.xcconfig
+//  Myplex
+//
+//  Created by Igor Ostriz on 8/15/13.
+//  Copyright (c) 2013 Igor Ostriz. All rights reserved.
+//
+
+//sportseventlive
+
+DOMAIN = api-demo.myplex.in //Demo
+//DOMAIN = api.myplex.com //Production
+//Demo
+//DOMAIN = api-demo.myplex.in
+//Production
+//DOMAIN = api.myplex.com
+PROTOCOL = https

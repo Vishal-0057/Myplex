@@ -1,0 +1,16 @@
+//
+//  Development.xcconfig
+//  Myplex
+//
+//  Created by Igor Ostriz on 8/15/13.
+//  Copyright (c) 2013 Igor Ostriz. All rights reserved.
+//
+
+
+//DOMAIN = alpha.myplex.in:8866
+//CLIENTKEY=c86f79514ec7976bd20de36f1c6f15900d8e09f699818024283bad1bf0609650
+DOMAIN = api-fifadev.myplex.in
+//DOMAIN = api-beta.myplex.in
+//DOMAIN = api-demo.myplex.in
+//CLIENTKEY=dcb11454ccdafdd4706c7186d37abd2ff96cd02dc998d1111d16d4778a797f85
+PROTOCOL = https
